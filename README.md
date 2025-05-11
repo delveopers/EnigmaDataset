@@ -36,7 +36,7 @@ Before setting up EnigmaDB, ensure that you have the following prerequisites ins
 ### Data gathering pipeline
 
 ```python
-from enigmadb import Database, EntrezQueries
+from EnigmaDB import Database, EntrezQueries
 queries = EntrezQueries()   # get queries
 
 db = Database(topics=queries(), out_dir="./data/raw", email=EMAIL, api_key=API_KEY, retmax=1500, max_rate=10)   # set parameters
@@ -46,7 +46,7 @@ db.build(with_index=False)  # startbuilding
 ### Creating Indexes
 
 ```python
-from enigmadb import create_index
+from EnigmaDB import create_index
 
 create_index("./data/raw")    # add path to data
 ```
@@ -54,7 +54,7 @@ create_index("./data/raw")    # add path to data
 ### Converting versions
 
 ```python
-from enigmadb import convert_fasta
+from EnigmaDB import convert_fasta
 
 convert_fasta(input_dir="./data/raw", output_dir="./data/parquet", mode='parquet')  # for parquet
 convert_fasta(input_dir="./data/raw", output_dir="./data/parquet", mode='csv')  # for csv
