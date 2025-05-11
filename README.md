@@ -21,7 +21,7 @@ Before setting up EnigmaDB, ensure that you have the following prerequisites ins
 #### 1. From PyPI
 
   ```cmd
-  pip install enigmadb
+  pip install enigmadatabase
   ```
 
 #### 2. Clone the Repo
