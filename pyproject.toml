@@ -6,7 +6,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "EnigmaDB"
+name = "enigmadatabase"
 version = "0.1.0"
 description = "NCBI DNA Database Builder and Dataset Loader for ML pipelines (Enigma2)."
 readme = "README.md"
@@ -32,7 +32,7 @@ classifiers = [
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.11"
 ]
 dependencies = [
   "biopython>=1.78",
@@ -44,12 +44,12 @@ dependencies = [
 ]
 
 [project.urls]
-"Source" = "https://github.com/shivendrra/enigma2"
-"Documentation" = "https://github.com/shivendrra/enigma2/tree/main/docs"
+Source = "https://github.com/delveopers/EnigmaDataset/"
+Documentation = "https://github.com/delveopers/EnigmaDataset/blob/main/docs/"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+# no package-dir needed since EnigmaDB/ sits at project root
 
 [tool.setuptools.packages.find]
-where = ["src"]
-include = ["*"]
+where = ["."]
+include = ["EnigmaDB*"]
